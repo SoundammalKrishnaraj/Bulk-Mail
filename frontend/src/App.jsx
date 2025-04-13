@@ -38,7 +38,7 @@ function App() {
 
   function send() {
     setstatus(true)
-    axios.post("http://localhost:5000/sendemail", { msg: msg ,emailList:emailList })
+    axios.post("mongodb+srv://Soundammal:Soundammal@cluster0.j4un40c.mongodb.net/passkey?retryWrites=true&w=majority&appName=Cluster0", { msg: msg ,emailList:emailList })
       .then(function (data) {
         if (data.data == true) {
           alert("Email Sent Successfully")
