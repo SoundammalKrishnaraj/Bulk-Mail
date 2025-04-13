@@ -40,6 +40,7 @@ function App() {
     setstatus(true)
     axios.post("https://bulk-mail-tgym.onrender.com/sendemail", { msg: msg ,emailList:emailList })
       .then(function (data) {
+        console.log("Response from backend:", data);
         if (data.data == true) {
           alert("Email Sent Successfully")
           setstatus(false)
